@@ -1,0 +1,35 @@
+@import url('https://fonts.googleapis.com/css?family=Open+Sans');
+body {
+  background-image: url("topography.png");
+  font-family: 'consolas', Courier, monospace;
+}
+main {
+  padding-left: 10%;
+  padding-right: 10%;
+}
+.topnav {
+  background-color: #333333;
+  overflow: hidden;
+  text-align: right;
+  padding: 14px 16px;
+}
+.topnav a {
+  color: #ff0099;
+  text-align: center;
+  text-decoration: none;
+  font-size: 17px;
+}
+h1 {
+  font-family: 'Open-Sans', sans-serif;
+}
+h2 {
+  text-align: center;
+  font-family: 'Open-Sans', sans-serif;
+}
+h3 {
+  color: #ff0099;
+  font-family: 'Open-Sans', sans-serif;
+}
+h4 {
+  font-family: 'Open-Sans', sans-serif;
+}
