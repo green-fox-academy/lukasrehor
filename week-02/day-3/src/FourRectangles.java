@@ -1,3 +1,4 @@
+// to plus 1 ve (WIDTH-x+1) tam je aby to nemohla byt 0 (pak by to byla primka. Pokud padne maximum tak to vyjde presne na velikost WIDTH
 import javax.swing.*;
 
 import java.awt.*;
@@ -12,15 +13,14 @@ public class FourRectangles {
         // avoid code duplication.
         for (int i = 0; i < 4; i++) {
             int x = (int) (Math.random() * WIDTH);
+            int g = (int) (Math.random() * 256);
             int y = (int) (Math.random() * HEIGHT);
             int r = (int) (Math.random() * 256);
-            int g = (int) (Math.random() * 256);
             int b = (int) (Math.random() * 256);
-            SHAKEIT(graphics, x, y, (int) (Math.random() * (WIDTH-x+1)), (int) (Math.random() * (HEIGHT-y+1)), r, g, b);
-            // to plus 1 ve (WIDTH-x+1) tam je aby to nemohla byt 0 (pak by to byla primka. Pokud padne maximum tak to vyjde presne na velikost WIDTH
+            drawSquares(graphics, x, y, (int) (Math.random() * (WIDTH-x+1)), (int) (Math.random() * (HEIGHT-y+1)), r, g, b);
         }
     }
-    public static void SHAKEIT (Graphics tadaa, int x, int y, int s, int t, int r, int g, int b) {
+    public static void drawSquares(Graphics tadaa, int x, int y, int s, int t, int r, int g, int b) {
         tadaa.setColor(new Color(r,g,b,255));
         tadaa.drawRect(x, y, s, t);
     }
