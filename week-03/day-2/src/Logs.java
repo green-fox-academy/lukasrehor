@@ -35,6 +35,5 @@ public class Logs {
          String[] uniquesArray = new String[log.length];
             uniquesArray = uniques.split(" ");
          return uniquesArray;
-        }
     }
 }

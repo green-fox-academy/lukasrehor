@@ -5,15 +5,17 @@ import java.util.Arrays;
 
 public class Anagram {
     public static void main(String[] args) {
-    String aWord = "Clint Eastwood";
-    String bWord = "Old West Action";
-    aWord = aWord.toLowerCase();
-    aWord = aWord.replaceAll("\\s+","");
-    bWord = bWord.toLowerCase();
-    bWord = bWord.replaceAll("\\s+","");
-    System.out.println(anagram(aWord,bWord));
+        String aWord = "Clint Eastwood";
+        String bWord = "Old West Action";
+        System.out.println(anagram(aWord,bWord));
     }
     public static boolean anagram (String aWord, String bWord) {
+        aWord = aWord.toLowerCase();
+        //aWord = aWord.replaceAll("\\s+","");  - vykosi mezery
+        //aWord = aWord.replaceAll("-", "");    - vykosi pomlcky. Jinak se to da udelat viz dalsi radek - to vymaze vsechno krome zadaneho intervalu
+        aWord = aWord.replaceAll("[^a-zA-Z]",""); // - vykosi vse krome a-z a A-Z. napr.[a-zA-Z0-9] kdyz chces nechat i cisla ...
+        bWord = bWord.toLowerCase();
+        bWord = bWord.replaceAll("[^a-zA-Z]","");
         char[] tempArrayA = aWord.toCharArray();
         char[] tempArrayB = bWord.toCharArray();
         Arrays.sort(tempArrayA);
