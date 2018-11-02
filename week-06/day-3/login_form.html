@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title>Login Form</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" type="text/css" media="screen" href="main.css" />
+  <script src="main.js"></script>
+  <style>
+    body {
+      background-color: rgb(220, 220, 220);
+    }
+    .container {
+      background-color: white;
+      width: 300;
+      height: 300;
+      margin-left: auto;
+      margin-right: auto;
+      margin-top: 40px;
+      margin-bottom: auto;
+      padding-left: 70px;
+      padding-right: 70px;
+    }
+    input {
+      width: 100%;
+      padding: 10px 8px;
+      margin: 8px 0;
+    }
+    button {
+      background-color: black;
+      color: white;
+      width: 100px;
+      padding: 10px;
+      border-radius: 20px;
+      border: none;
+      cursor: pointer;
+    }
+    button:hover {
+      opacity: 0.7;
+    }
+  </style>
+</head>
+<body>
+  <form action="www.google.cz">
+  <div class="container">
+    <h2>ACCOUNT LOGIN</h2>
+    <label for="uname">USERNAME</label>
+    <input type="text" placeholder="Enter Username" name="uname" required>
+    <label for="pwd">PASSWORD</label>
+    <input type="password" placeholder="Enter Password" name="pwd" required>
+    <span class="pwd"><a href="www.google.cz">Forgot Password?</a></span>
+    <button type="submit">Login</button>    
+  </div>
+  </form>
+  
+</body>
+</html>
