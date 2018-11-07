@@ -1,4 +1,4 @@
-package com.greenfox.lukasrehor.BankOfSimba.controllers;
+package com.greenfox.lukasrehor.BankOfSimba;
 
 public class BankAccount {
     String name;

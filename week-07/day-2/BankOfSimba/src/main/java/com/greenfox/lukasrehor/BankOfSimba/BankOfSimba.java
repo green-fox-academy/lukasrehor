@@ -1,4 +1,4 @@
-package com.greenfox.lukasrehor.BankOfSimba.controllers;
+package com.greenfox.lukasrehor.BankOfSimba;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
