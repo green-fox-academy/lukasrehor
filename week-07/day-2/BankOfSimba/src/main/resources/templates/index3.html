@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>Thymeleaf Exercise #</title>
+    <link rel="stylesheet" th:href="@{/style.css}" />
+    <meta charset="utf-8" />
+</head>
+<body>
+<table>
+    <tr>
+        <th>Index</th><th>Name</th><th>Balance</th><th>Animal Type</th><th>King</th><th>True/false syntax test</th>
+    </tr>
+    <tr th:each="eachobject : ${list}" th:style="${eachobject.getKing()}?'color:gold':'color:default'">
+        <td th:text="${eachobjectStat.index} + 1"></td>
+        <td th:text="${eachobject.getName()}"></td>
+        <td th:text="${eachobject.getBalance()}"></td>
+        <td th:text="${eachobject.getAnimalType()}"></td>
+        <td th:text="${eachobject.getKing()}?'KING':'moron'"></td>
+        <td th:text="${eachobject.getAnimalType().equals('lion')}?'Its a lion!!!':'Its whatever'"></td>
+    </tr>
+</table>
+</body>
+</html>
