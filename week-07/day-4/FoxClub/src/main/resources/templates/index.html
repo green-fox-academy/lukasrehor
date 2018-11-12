@@ -2,7 +2,7 @@
 <html xmlns:th="http://www.thymeleaf.org">
 <head>
     <title>Fox Tamagochi Homepage</title>
-    <link rel="stylesheet" th:href="@{/style.css}" />
+    <link rel="stylesheet" th:href="@{/styles.css}" />
     <meta charset="utf-8" />
 </head>
 <body>
@@ -13,12 +13,12 @@
 </ul>
 <img src="/assets/greenfox.png">
 <br>
-<p th:text="|This is ${name}. Currently living on pizza and lemonade. He knows ${tricks} tricks.|"></p>
+<p th:text="|This is ${name}. Currently living on ${food} and ${drink}. ${name} ${tricks}|"></p>
 <h1>Known Tricks</h1>
-<ul>
-    <li>write HTML</li>
-    <li>code in Java</li>
+<ul th:each="something : ${listoftricks}"  th:if="${not #lists.isEmpty(listoftricks)}">
+    <li th:text="${something}"></li>
 </ul>
+<p th:text="|You need to teach ${name} something.|" th:if="${#lists.isEmpty(listoftricks)}"></p>
 <a href="/login">Login</a>
 </body>
 </html>
