@@ -2,7 +2,8 @@
 <html xmlns:th="http://www.thymeleaf.org">
 <head>
     <title>Connection with MySQL</title>
-    <link rel="stylesheet" th:href="@{/styles.css}" />
+    <!--<link rel="stylesheet" th:href="@{/styles.css}" />-->
+    <link href="/webjars/bootstrap/3.3.7-1/css/bootstrap.min.css" rel="stylesheet"/>
     <meta charset="utf-8" />
 </head>
 <body>
@@ -23,5 +24,7 @@
         <td><a th:href="'/todo/'+${todo.id}+'/edit'">Update</a></td>
     </tr>
 </table>
+<script src="webjars/jquery/1.11.1/jquery.min.js"></script>
+<script src="webjars/bootstrap/3.3.7-1/js/bootstrap.min.js"></script>
 </body>
 </html>
