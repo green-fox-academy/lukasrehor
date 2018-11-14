@@ -12,11 +12,12 @@
 </div>
 <table class="mytableclass">
     <tr>
-        <th>ID</th><th>ACTION</th><th>DONE</th><th>URGENT</th><th></th>
+        <th>ID</th><th>ACTION</th><th>DONE</th><th>URGENT</th><th></th><th></th>
     </tr>
     <tr th:each="todo : ${todolist}" th:if="${not #lists.isEmpty(todolist)}">
         <td th:text="${todo.id}"></td><td th:text="${todo.title}"></td><td th:text="${todo.done}"></td><td th:text="${todo.urgent}"></td>
         <td><a th:href="'/todo/delete/?id='+${todo.id}">Delete</a></td>
+        <td><a th:href="'/todo/'+${todo.id}+'/edit'">Update</a></td>
     </tr>
 </table>
 </body>

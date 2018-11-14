@@ -5,10 +5,7 @@ import com.greenfox.connectionwithmysql.repository.Inface1;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.PostMapping;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RequestParam;
+import org.springframework.web.bind.annotation.*;
 
 import java.util.stream.Collectors;
 
@@ -51,6 +48,23 @@ public class TodoController {
     @GetMapping(value = "/delete")
     public String delTodo (@RequestParam(value = "id") Long x){
         todoRepository.deleteById(x);
+        return "redirect:/todo/";
+    }
+
+    @GetMapping(value = "/{id}/edit")
+    public String editTodo (@PathVariable(value = "id") Long x, Model model){
+        model.addAttribute("todo", todoRepository.findById(x).get());
+        return "edit";
+    }
+
+    @PostMapping(value = "/{id}/edit")
+    public String editTodo2 (@PathVariable(value = "id") Long x,@RequestParam(value = "description") String description, @RequestParam(value = "urgent", required = false, defaultValue = "false") boolean urgent,
+                             @RequestParam(value = "done", required = false, defaultValue = "false") boolean done) {
+        Todo t = todoRepository.findById(x).get();
+        if (description != null) t.setTitle(description);
+        t.setUrgent(urgent);
+        t.setDone(done);
+        todoRepository.save(t);
         return "redirect:/todo/";
     }
 }
