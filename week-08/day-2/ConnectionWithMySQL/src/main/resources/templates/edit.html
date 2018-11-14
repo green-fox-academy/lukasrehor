@@ -8,11 +8,11 @@
 <body>
 <form th:action="'/todo/'+${todo.id}+'/edit'" method="post">
     <h1>Edit Todo</h1>
-    Todo description <input type="text" th:placeholder="${todo.title}" name="description">
+    Todo description <input type="text" th:value="${todo.title}" name="description">
     <br>
-    Urgent <input type="checkbox" name="urgent">
+    Urgent <input type="checkbox" th:checked="${todo.urgent}" name="urgent">
     <br>
-    Done <input type="checkbox" name="done">
+    Done <input type="checkbox" th:checked="${todo.done}" name="done">
     <br>
     <input type="submit" value="Submit!"> <a href="/todo/">Cancel</a>
 </form>

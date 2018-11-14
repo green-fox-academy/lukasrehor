@@ -61,7 +61,7 @@ public class TodoController {
     public String editTodo2 (@PathVariable(value = "id") Long x,@RequestParam(value = "description") String description, @RequestParam(value = "urgent", required = false, defaultValue = "false") boolean urgent,
                              @RequestParam(value = "done", required = false, defaultValue = "false") boolean done) {
         Todo t = todoRepository.findById(x).get();
-        if (description != null) t.setTitle(description);
+        t.setTitle(description);
         t.setUrgent(urgent);
         t.setDone(done);
         todoRepository.save(t);
