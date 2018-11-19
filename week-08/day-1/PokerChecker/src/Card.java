@@ -2,8 +2,7 @@ public class Card implements Comparable<Card>{
 
     int color;
     int id;
-
-    public Card(int color, int id) {
+    Card(int color, int id) {
         this.color = color;
         this.id = id;
     }

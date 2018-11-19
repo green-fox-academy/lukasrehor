@@ -1,0 +1,54 @@
+body {
+    background-color: coral;
+    font-family: "Comic Sans MS", cursive, sans-serif;
+}
+h1 {
+    text-align: center;
+    font-size: 50px;
+    font-style: oblique;
+}
+div {
+    text-align: center;
+    color: brown;
+}
+table.mytableclass {
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 40px;
+    margin-bottom: auto;
+    width: 800px;
+    border-collapse: collapse;
+    border-style: hidden;
+}
+th {background-color: black;
+    font-weight: lighter;
+    color: rgb(216, 215, 215);
+    font-size: 32px;
+    text-align: left;
+    padding-left: 30px;
+    border-bottom: 4px solid rgb(160, 160, 160);
+}
+tr {
+    background-color: white;
+}
+tr:nth-child(even) {
+    background-color: rgb(226, 226, 226);
+}
+td {
+    color: rgb(117, 117, 117);
+    font-size: 18px;
+    text-align: left;
+    padding-left: 30px;
+    border: 2px solid rgb(160, 160, 160);}
+tr:first-child th:first-child {
+    border-top-left-radius: 6px;
+}
+tr:first-child th:last-child {
+    border-top-right-radius: 6px;
+}
+tr:last-child td:first-child {
+    border-bottom-left-radius: 6px;
+}
+tr:last-child td:last-child {
+    border-bottom-right-radius: 6px;
+}
